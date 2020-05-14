@@ -1,25 +1,20 @@
-module.exports = function(sequelize, Sequelize) {
-  var User = sequelize.define("user", {
-    id: {
-      autoIncrement: true,
-      primaryKey: true,
-      type: Sequelize.INTEGER
+const sequelize = require('sequelize')
+const connection = require('../config/connection');
+
+let User = connection.define("User", {
+    // Giving the Users model a name of type STRING
+    username: sequelize.STRING,
+    password: sequelize.STRING,
+    name: sequelize.STRING,
+    age: {
+      type: sequelize.INTEGER,
+      allowNull: false,
+      len: [1, 2]
     },
-    firstname: {
-      type: Sequelize.STRING,
-      notEmpty: true
-    },
-    lastname: {
-      type: Sequelize.STRING,
-      notEmpty: true
-    },
-    username: {
-      type: Sequelize.TEXT
-    },
-    password: {
-      type: Sequelize.STRING,
-      allowNull: false
-    }
-  });
-  return User;
-};
+    location: sequelize.STRING,
+    style: sequelize.INTEGER,
+    platform: sequelize.INTEGER
+  })
+
+  
+module.exports = User;
