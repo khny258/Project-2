@@ -2,6 +2,9 @@
 //this must be altered to fit our score system
 
 // LOAD DATA from our friends.js file
+
+//QUESTION: HOW DO WE PULL DATA FROM DATABASE?
+//this routing assumes we're pulling data from the subfolder survey/friends
 const friendData = require("../survey/friends");
 
 
@@ -42,26 +45,26 @@ module.exports = (app) => {
                 if (friendData[i].like18 === userScore.like1) {score ++};
                 if (friendData[i].like19 === userScore.like1) {score ++};
                 if (friendData[i].like20 === userScore.like1) {score ++};
-                if (friendData[i].dislike21 === userScore.like1) {score ++};
-                if (friendData[i].dislike22 === userScore.like1) {score ++};
-                if (friendData[i].dislike23 === userScore.like1) {score ++};
-                if (friendData[i].dislike24 === userScore.like1) {score ++};
-                if (friendData[i].dislike25 === userScore.like1) {score ++};
-                if (friendData[i].dislike26 === userScore.like1) {score ++};
-                if (friendData[i].dislike27 === userScore.like1) {score ++};
-                if (friendData[i].dislike28 === userScore.like1) {score ++};
-                if (friendData[i].dislike29 === userScore.like1) {score ++};
-                if (friendData[i].dislike30 === userScore.like1) {score ++};
-                if (friendData[i].dislike31 === userScore.like1) {score ++};
-                if (friendData[i].dislike32 === userScore.like1) {score ++};
-                if (friendData[i].dislike33 === userScore.like1) {score ++};
-                if (friendData[i].dislike34 === userScore.like1) {score ++};
-                if (friendData[i].dislike35 === userScore.like1) {score ++};
-                if (friendData[i].dislike36 === userScore.like1) {score ++};
-                if (friendData[i].dislike37 === userScore.like1) {score ++};
-                if (friendData[i].dislike38 === userScore.like1) {score ++};
-                if (friendData[i].dislike39 === userScore.like1) {score ++};
-                if (friendData[i].dislike40 === userScore.like1) {score ++};
+                // if (friendData[i].dislike21 === userScore.like1) {score ++};
+                // if (friendData[i].dislike22 === userScore.like1) {score ++};
+                // if (friendData[i].dislike23 === userScore.like1) {score ++};
+                // if (friendData[i].dislike24 === userScore.like1) {score ++};
+                // if (friendData[i].dislike25 === userScore.like1) {score ++};
+                // if (friendData[i].dislike26 === userScore.like1) {score ++};
+                // if (friendData[i].dislike27 === userScore.like1) {score ++};
+                // if (friendData[i].dislike28 === userScore.like1) {score ++};
+                // if (friendData[i].dislike29 === userScore.like1) {score ++};
+                // if (friendData[i].dislike30 === userScore.like1) {score ++};
+                // if (friendData[i].dislike31 === userScore.like1) {score ++};
+                // if (friendData[i].dislike32 === userScore.like1) {score ++};
+                // if (friendData[i].dislike33 === userScore.like1) {score ++};
+                // if (friendData[i].dislike34 === userScore.like1) {score ++};
+                // if (friendData[i].dislike35 === userScore.like1) {score ++};
+                // if (friendData[i].dislike36 === userScore.like1) {score ++};
+                // if (friendData[i].dislike37 === userScore.like1) {score ++};
+                // if (friendData[i].dislike38 === userScore.like1) {score ++};
+                // if (friendData[i].dislike39 === userScore.like1) {score ++};
+                // if (friendData[i].dislike40 === userScore.like1) {score ++};
 
             scoresArr.push(score);
         }
