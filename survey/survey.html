@@ -118,8 +118,7 @@
                   </optgroup>
                 </select>
 
-            <hr>
-            
+            <br>
             <br>
             
             <h4>When is your birthday?</h4>
@@ -148,9 +147,9 @@
             <br>
 
             <form>
-              <p><input id="male" type="checkbox" value="Male"/>Male</p>
-              <p><input id="female" type="checkbox" value="Female"/>Female</p>
-              <p><input id="non-binary" type="checkbox" value="non-binary"/>Non-binary</p>
+              <label class="checkbox-inline"><input id="male" style="margin-right: 10px margin-left: 20px" type="checkbox" value="Male"/>Male</label>
+              <label class="checkbox-inline"><input id="female" style="margin-right: 10px" type="checkbox" value="Female"/>Female</label>
+              <label class="checkbox-inline"><input id="non-binary" style="margin-right: 10px" type="checkbox" value="non-binary"/>Non-binary</label>
             </form>
 
             <br>
@@ -192,16 +191,10 @@
                 </div>
               </div>
 
-              <hr>
+              <br>
 
               <h4>Tell us about yourself!</h4>
-              <p>Filler</p>
-
-
-
-
-
-
+              <textarea maxlength="450" name="myBio" rows="5" cols="50" >Behind my music!</textarea>
 
             <!-- Submit Button -->
             <button type="submit" class="btn btn-warning btn-lg " id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
