@@ -19,7 +19,28 @@
   },
   "homepage": "https://github.com/khny258/Project-2#readme",
   "dependencies": {
-    "howlongtobeat": "^1.2.1",
-    "igdb-api-node": "^4.0.4"
+
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.0",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.16.2",
+    "howlongtobeat": "1.2.1",
+    "igdb-api-node": "4.0.4",
+    "mysql2": "^1.6.5",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "^5.15.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "mocha": "^6.2.0",
+    "prettier": "^1.17.1"
+
   }
 }
