@@ -7,13 +7,47 @@
 //this routing assumes we're pulling data from the subfolder survey/friends
 const friendData = require("../survey/friends");
 
+//ice cream activity code below
+var connection = mysql.createConnection({
+    host: "localhost",
+  
+    // Your port; if not 3306
+    port: 3306,
+  
+    // Your username
+    user: "root",
+  
+    // Your password
+    password: "",
+    database: "timbr_db"
+  });
+
+  connection.connect(function(err) {
+    if (err) throw err;
+    console.log("connected as id " + connection.threadId);
+    afterConnection();
+  });
+  
+  function afterConnection() {
+    return connection.query("SELECT * FROM timbr_user", function(err, res) {
+      if (err) throw err;
+    //   return res;
+      console.log(res);
+            connection.end();
+    });
+  }
+//ice cream activity code above
+
+
+
 
 // ROUTING
 module.exports = (app) => {
 
     // API GET Requests - we take friendData and put it in a JSON package
     app.get("/api/friends", (req, res) => {
-        res.json(friendData);
+        // res.json(friendData);
+        afterConnection();
     });
 
     // API POST Requests - we take friendData and create more variables
