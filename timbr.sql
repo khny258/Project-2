@@ -11,8 +11,15 @@ email VARCHAR(50) NOT NULL,
 birthday VARCHAR(30) NOT NULL,
 gender_identity VARCHAR(30),
 gender_of_partner VARCHAR(30),
+match VARCHAR(30),
+---new column> "instrument"
+---new column> "location"
+---new column> "genre_preferences"
+---new column> "liked_users"
+---new column> "disliked_users"
+---new column> "my_bio"
 
-
+---Q: if the value is from a checkbox or dropdown how does SQL interpret that datatype?
 
 password VARCHAR(12) NOT NULL,
 liked_genres VARCHAR(30) 

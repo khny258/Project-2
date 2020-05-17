@@ -7,46 +7,46 @@
 //this routing assumes we're pulling data from the subfolder survey/friends
 const friendData = require("../survey/friends");
 
-//ice cream activity code below
-var connection = mysql.createConnection({
-    host: "localhost",
+// //ice cream activity code below
+// var connection = mysql.createConnection({
+//     host: "localhost",
   
-    // Your port; if not 3306
-    port: 3306,
+//     // Your port; if not 3306
+//     port: 3306,
   
-    // Your username
-    user: "root",
+//     // Your username
+//     user: "root",
   
-    // Your password
-    password: "",
-    database: "timbr_db"
-  });
+//     // Your password
+//     password: "",
+//     database: "timbr_db"
+//   });
 
-  connection.connect(function(err) {
-    if (err) throw err;
-    console.log("connected as id " + connection.threadId);
-    afterConnection();
-  });
+//   connection.connect(function(err) {
+//     if (err) throw err;
+//     console.log("connected as id " + connection.threadId);
+//     afterConnection();
+//   });
   
-  function afterConnection() {
-    return connection.query("SELECT * FROM timbr_user", function(err, res) {
-      if (err) throw err;
-    //   return res;
-      console.log(res);
-            connection.end();
-    });
-  }
-//ice cream activity code above
-
+//   function afterConnection() {
+//     return connection.query("SELECT * FROM timbr_user", function(err, res) {
+//       if (err) throw err;
+//     //   return res;
+//       console.log(res);
+//             connection.end();
+//     });
+//   }
+// //ice cream activity code above
+//come back to it
 
 
 
 // ROUTING
 module.exports = (app) => {
 
-    // API GET Requests - we take friendData and put it in a JSON package
+    // API GET Requests - we take friendData and put it in a JSON package but from here we need to get all 
     app.get("/api/friends", (req, res) => {
-        // res.json(friendData);
+        res.json(friendData);
         afterConnection();
     });
 
@@ -55,6 +55,10 @@ module.exports = (app) => {
         let userScore = req.body.scores; //
         const scoresArr = [];   
         let bestMatch = 0;
+        //read friendsData from database
+        connection.query...
+
+
 
 
         for (var i = 0; i < friendData.length; i++) {
@@ -108,8 +112,11 @@ module.exports = (app) => {
         var match = scoresArr[indexOfLargest]
         console.log(match)
         res.json(match)
+        //save match
+        connection.query("UPDATE match from timbr_user WHERE id=?", matchID, (err, data) => {
+            //user updated
+        })
     });
-
 
     app.post("/api/clear", (req, res) => {
         // Empty out the arrays of data
