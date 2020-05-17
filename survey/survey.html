@@ -39,7 +39,7 @@
             
             <h4>What do you play?</h4>
 
-                <label id="instQ" for="select">Instrument(s)</label>
+                <label id="instrument" for="select">Instrument(s)</label>
                 <select id="select">
                   <option value="">Choose...</option>
                   <optgroup id="instTypeb1" label="Brass">
@@ -122,17 +122,17 @@
             <br>
             
             <h4>When is your birthday?</h4>
-            <input type="date" id="photo" class="form-control" required="">
+            <input type="date" id="bday" class="form-control" required="">
             
             <br>
 
             <h4>Where are you located?</h4>
-            <input type="text" id="photo" class="form-control" required="">
+            <input type="text" id="location" class="form-control" required="">
             
             <br>
-
+<!-- review when to use labels and/or select tags -->
             <h4>I identify as...</h4>
-            <select id="select">
+            <select id="gender">
               <option value="">Choose...</option>
               <option id="female" value="female">Female</option>
               <option id="male" value="male">Male</option>
@@ -147,9 +147,9 @@
             <br>
 
             <form>
-              <label class="checkbox-inline"><input id="male" style="margin-right: 10px margin-left: 20px" type="checkbox" value="Male"/>Male</label>
-              <label class="checkbox-inline"><input id="female" style="margin-right: 10px" type="checkbox" value="Female"/>Female</label>
-              <label class="checkbox-inline"><input id="non-binary" style="margin-right: 10px" type="checkbox" value="non-binary"/>Non-binary</label>
+              <label class="checkbox-inline"><input id="partnerMale" style="margin-right: 10px margin-left: 20px" type="checkbox" value="Male"/>Male</label>
+              <label class="checkbox-inline"><input id="partnerFemale" style="margin-right: 10px" type="checkbox" value="Female"/>Female</label>
+              <label class="checkbox-inline"><input id="partnerNon-binary" style="margin-right: 10px" type="checkbox" value="non-binary"/>Non-binary</label>
             </form>
 
             <br>
@@ -161,32 +161,32 @@
             <div class="container">
                 <div class="row">
                   <div class="col-sm">
-                    <p><label><input id="like1" type="checkbox" value="" />  Hip-Hop</label></p>
-                    <p><label><input id="like2" type="checkbox" value="" />  Pop</label></p>
-                    <p><label><input id="like3" type="checkbox" value="" />  Country</label></p>
-                    <p><label><input id="like4" type="checkbox" value="" />  R&B</label></p>
-                    <p><label><input id="like5" type="checkbox" value="" />  Latin</label></p>
+                    <p><label><input id="hipHop" type="checkbox" value="" />  Hip-Hop</label></p>
+                    <p><label><input id="pop" type="checkbox" value="" />  Pop</label></p>
+                    <p><label><input id="country" type="checkbox" value="" />  Country</label></p>
+                    <p><label><input id="rb" type="checkbox" value="" />  R&B</label></p>
+                    <p><label><input id="latin" type="checkbox" value="" />  Latin</label></p>
                   </div>
                   <div class="col-sm">
-                    <p><label><input id="like6" type="checkbox" value="" />  Rock</label></p>
-                    <p><label><input id="like7" type="checkbox" value="" />  Dance/Electronic</label></p>
-                    <p><label><input id="like8" type="checkbox" value="" />  Indie</label></p>
-                    <p><label><input id="like9" type="checkbox" value="" />  Folk & Acoustic</label></p>
-                    <p><label><input id="like10" type="checkbox" value="" />  Classical</label></p>
+                    <p><label><input id="rock" type="checkbox" value="" />  Rock</label></p>
+                    <p><label><input id="danceElectronic" type="checkbox" value="" />  Dance/Electronic</label></p>
+                    <p><label><input id="indie" type="checkbox" value="" />  Indie</label></p>
+                    <p><label><input id="folkAcoustic" type="checkbox" value="" />  Folk & Acoustic</label></p>
+                    <p><label><input id="classical" type="checkbox" value="" />  Classical</label></p>
                   </div>
                   <div class="col-sm">
-                    <p><label><input id="like11" type="checkbox" value="" />  Christian</label></p>
-                    <p><label><input id="like12" type="checkbox" value="" />  K-Pop</label></p>
-                    <p><label><input id="like13" type="checkbox" value="" />  Arab</label></p>
-                    <p><label><input id="like14" type="checkbox" value="" />  Desi</label></p>
-                    <p><label><input id="like15" type="checkbox" value="" />  Afro</label></p>
+                    <p><label><input id="christian" type="checkbox" value="" />  Christian</label></p>
+                    <p><label><input id="kPop" type="checkbox" value="" />  K-Pop</label></p>
+                    <p><label><input id="arab" type="checkbox" value="" />  Arab</label></p>
+                    <p><label><input id="desi" type="checkbox" value="" />  Desi</label></p>
+                    <p><label><input id="afro" type="checkbox" value="" />  Afro</label></p>
                   </div>
                   <div class="col-sm">
-                    <p><label><input id="like16" type="checkbox" value="" />  Regional Mexican</label></p>
-                    <p><label><input id="like17" type="checkbox" value="" />  Reggae</label></p>
-                    <p><label><input id="like18" type="checkbox" value="" />  Blues</label></p>
-                    <p><label><input id="like19" type="checkbox" value="" />  Punk</label></p>
-                    <p><label><input id="like20" type="checkbox" value="" />  Funk</label></p>
+                    <p><label><input id="regionalMexican" type="checkbox" value="" />  Regional Mexican</label></p>
+                    <p><label><input id="reggae" type="checkbox" value="" />  Reggae</label></p>
+                    <p><label><input id="blues" type="checkbox" value="" />  Blues</label></p>
+                    <p><label><input id="punk" type="checkbox" value="" />  Punk</label></p>
+                    <p><label><input id="funk" type="checkbox" value="" />  Funk</label></p>
                   </div>
                 </div>
               </div>
@@ -194,10 +194,14 @@
               <br>
 
               <h4>Tell us about yourself!</h4>
-              <textarea maxlength="450" name="myBio" rows="5" cols="50" >Behind my music!</textarea>
+              <textarea maxlength="450" id="myBio" rows="5" cols="50" >Behind the music!</textarea>
 
             <!-- Submit Button -->
-            <button type="submit" class="btn btn-warning btn-lg " id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+            <!-- QQQ: when the submit button is triggered how will the user data be implemented in the database? -->
+
+
+            <!-- the code below is boilerplate that came with friendFinder, disregard or use if you wish -->
+            <!-- <button type="submit" class="btn btn-warning btn-lg " id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
                 Submit</button>
         </form>
         <hr>
@@ -235,7 +239,7 @@
                         Repo</a></p>
             </div>
         </footer>
-    </div>
+    </div> -->
     <script type="text/javascript" src="survey.js"></script>
 </body>
 

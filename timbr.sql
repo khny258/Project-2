@@ -14,12 +14,15 @@ gender_of_partner VARCHAR(30),
 match VARCHAR(30),
 ---new column> "instrument"
 ---new column> "location"
----new column> "genre_preferences"
+---new column> "genre_preferences" QQQ--> how would you include the genre preferences in the Timbr_user's table?
 ---new column> "liked_users"
 ---new column> "disliked_users"
 ---new column> "my_bio"
+---new column> "scores"
 
----Q: if the value is from a checkbox or dropdown how does SQL interpret that datatype?
+---QQQ: if the value is from a checkbox or dropdown how does SQL interpret that datatype?
+
+
 
 password VARCHAR(12) NOT NULL,
 liked_genres VARCHAR(30) 
