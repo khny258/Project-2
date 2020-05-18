@@ -1,0 +1,43 @@
+/* body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+} */
+
+
+/* footer {
+    min-height: 10vh;
+    position: fixed;
+} */
+
+.footer-fixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+card {
+    width: 100%;
+}
+
+
+/* 
+.card-image {
+    max-height: 25vh;
+    min-height: 25vh;
+} */
+
+.card-action {
+    min-height: 10vh;
+}
+
+.tab-content {
+    max-height: 25vh;
+    min-height: 25vh;
+    font-size: 2rem;
+    overflow-y: scroll;
+}
