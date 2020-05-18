@@ -14,11 +14,8 @@ gender_of_partner VARCHAR(30),
 match VARCHAR(30),
 ---new column> "instrument"
 ---new column> "location"
----new column> "genre_preferences" QQQ--> how would you include the genre preferences in the Timbr_user's table?
----new column> "liked_users"
----new column> "disliked_users"
 ---new column> "my_bio"
----new column> "scores"
+
 
 ---QQQ: if the value is from a checkbox or dropdown how does SQL interpret that datatype?
 
@@ -151,8 +148,3 @@ values ("Cesar", "Guzman", "xkrajcik@gmail.com", "5/14/1990", "female", "male")
 values ("Lorena", "Mccoy", "hermiston.marlen@gmail.com", "5/14/1990", "female", "male")
 values ("Irma", "Carr", "russ.hermiston@gmail.com", "5/14/1990", "female", "male")
 values ("Ed", "Hopkins", "sarina.dibbert@waters.info", "5/14/1990", "female", "male")
-values ("Verna", "Schwartz", "jjaskolski@bahringer.com", "5/14/1990", "gay", "gay")
-values ("Felix", "Hubbard", "ernesto.prohaska@yahoo.com", "5/14/1990", "gay", "gay")
-values ("Jimmie", "Hanson", "jgulgowski@hane.info", "5/14/1990", "gay", "gay")
-values ("Homer", "Dixon", "domenic65@gmail.com", "5/14/1990", "gay", "gay")
-values ("Lionel", "Mendoza", "augustine90@green.org", "5/14/1990", "gay", "gay")
