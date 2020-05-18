@@ -13,8 +13,19 @@ let User = connection.define("User", {
     },
     location: sequelize.STRING,
     style: sequelize.INTEGER,
-    platform: sequelize.INTEGER
+    platform: sequelize.INTEGER,
+    firstName: sequelize.STRING,
+    lastName: sequelize.STRING,
+    photo: sequelize.STRING,
+    instrument: sequelize.STRING,
+    birthDay: sequelize.STRING,
+    location: sequelize.STRING,
+    gender: sequelize.STRING,
+    partnerGender: sequelize.STRING,
+    scores: sequelize.STRING,
+    myBio: sequelize.TEXT,
   })
+
 
   
 module.exports = User;

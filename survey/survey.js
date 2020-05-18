@@ -24,7 +24,7 @@ $("#submit").on("click", (event) => {
         firstName: $("#firstName").val(),
         lastName: $("#lastName").val(),
         photo: $("#photo").val(),
-        instruments: [
+        instrument: [
             $("#instTypeb1").val(),
             $("#instTypeb2").val(),
             $("#instTypeb3").val(),
@@ -40,114 +40,93 @@ $("#submit").on("click", (event) => {
             $("#instTypep3").val(),
             $("#instTypep4").val(),
             $("#instTypep5").val(),
-            $("#instTypep6").val()
-            $("#instTypep7").val()
-            $("#instTypep8").val()
-            $("#instTypep9").val()
-            $("#instTypep10").val()
-            $("#instTypep11").val()
-            $("#instTypep12").val()
-            $("#instTypep14").val()
-            $("#instTypep15").val()
-            $("#instTypep16").val()
-            $("#instTypes1").val()
-            $("#instTypes2").val()
-            $("#instTypes3").val()
-            $("#instTypes4").val()
-            $("#instTypes5").val()
-            $("#instTypes6").val()
-            $("#instTypes7").val()
-            $("#instTypes8").val()
-            $("#instTypes9").val()
-            $("#instTypes10").val()
-            $("#instTypew1").val()
-            $("#instTypew2").val()
-            $("#instTypew3").val()
-            $("#instTypew4").val()
-            $("#instTypew5").val()
-            $("#instTypew6").val()
-            $("#instTypew7").val()
-            $("#instTypew8").val()
-            $("#instTypew9").val()
-            $("#instTypew10").val()
-            $("#instTypew11").val()
-            $("#instTypek1").val()
-            $("#instTypek2").val()
-            $("#instTypek3").val()
-            $("#instTypek4").val()
-            $("#instTypek5").val()
-            $("#instTypek6").val()
-            $("#instTypek7").val()
-            $("#instTypek8").val()
-            $("#instTypev1").val()
-            $("#instTypev2").val()
-            $("#instTypev3").val()
-            $("#instTypev4").val()
-            $("#instTypev5").val()
-            $("#instTypev6").val()
-            $("#instTypev7").val()
-            $("#instTypev8").val()
-            $("#taste1").val()
-            $("#taste2").val()
-            $("#taste3").val()
-            $("#taste4").val()
-            $("#taste5").val()
+            $("#instTypep6").val(),
+            $("#instTypep7").val(),
+            $("#instTypep8").val(),
+            $("#instTypep9").val(),
+            $("#instTypep10").val(),
+            $("#instTypep11").val(),
+            $("#instTypep12").val(),
+            $("#instTypep14").val(),
+            $("#instTypep15").val(),
+            $("#instTypep16").val(),
+            $("#instTypes1").val(),
+            $("#instTypes2").val(),
+            $("#instTypes3").val(),
+            $("#instTypes4").val(),
+            $("#instTypes5").val(),
+            $("#instTypes6").val(),
+            $("#instTypes7").val(),
+            $("#instTypes8").val(),
+            $("#instTypes9").val(),
+            $("#instTypes10").val(),
+            $("#instTypew1").val(),
+            $("#instTypew2").val(),
+            $("#instTypew3").val(),
+            $("#instTypew4").val(),
+            $("#instTypew5").val(),
+            $("#instTypew6").val(),
+            $("#instTypew7").val(),
+            $("#instTypew8").val(),
+            $("#instTypew9").val(),
+            $("#instTypew10").val(),
+            $("#instTypew11").val(),
+            $("#instTypek1").val(),
+            $("#instTypek2").val(),
+            $("#instTypek3").val(),
+            $("#instTypek4").val(),
+            $("#instTypek5").val(),
+            $("#instTypek6").val(),
+            $("#instTypek7").val(),
+            $("#instTypek8").val(),
+            $("#instTypev1").val(),
+            $("#instTypev2").val(),
+            $("#instTypev3").val(),
+            $("#instTypev4").val(),
+            $("#instTypev5").val(),
+            $("#instTypev6").val(),
+            $("#instTypev7").val(),
+            $("#instTypev8").val(),
+        ],
+
+        birthDay: $("#bday").val(),
+        location: $("#location").val(),
+        gender: [
+            $("#male").val(),
+            $("#female").val(),
+            $("#non-binary").val(),
+        ],
+        partnerGender: [
+            $("#partnerMale").val(),
+            $("#partnerFemale").val(),
+            $("#partnerNon-binary").val(),
         ],
         //music genre preferences
         scores: [
-            $("#like1").val()
-            $("#like2").val()
-            $("#like3").val()
-            $("#like4").val()
-            $("#like5").val()
-            $("#like6").val()
-            $("#like7").val()
-            $("#like8").val()
-            $("#like9").val()
-            $("#like10").val()
-            $("#like11").val()
-            $("#like12").val()
-            $("#like13").val()
-            $("#like14").val()
-            $("#like15").val()
-            $("#like16").val()
-            $("#like17").val()
-            $("#like18").val()
-            $("#like19").val()
-            $("#like20").val()
-            $("#dislike1").val()
-            $("#dislike1").val()
-            $("#dislike2").val()
-            $("#dislike3").val()
-            $("#dislike4").val()
-            $("#dislike5").val()
-            $("#dislike6").val()
-            $("#dislike7").val()
-            $("#dislike8").val()
-            $("#dislike9").val()
-            $("#dislike10").val()
-            $("#dislike12").val()
-            $("#dislike13").val()
-            $("#dislike14").val()
-            $("#dislike15").val()
-            $("#dislike16").val()
-            $("#dislike17").val()
-            $("#dislike18").val()
-            $("#dislike19").val()
-            $("#dislike20").val()
-            $("#taste1").val()
-            $("#taste2").val()
-            $("#taste3").val()
-            $("#taste4").val()
-            $("#taste5").val()
-        ]
+            $("#hipHop").val(),
+            $("#pop").val(),
+            $("#country").val(),
+            $("#rb").val(),
+            $("#latin").val(),
+            $("#rock").val(),
+            $("#danceElectronic").val(),
+            $("#indie").val(),
+            $("#folkAcoustic").val(),
+            $("#classical").val(),
+            $("#christian").val(),
+            $("#kPop").val(),
+            $("#arab").val(),
+            $("#desi").val(),
+            $("#afro").val(),
+            $("#regionalMexican").val(),
+            $("#reggae").val(),
+            $("#blues").val(),
+            $("#punk").val(),
+            $("#funk").val(),
+   
+        ],
+        myBio: $("#myBio").val()
     };
-
-
-
-
-
-
 
     // AJAX post the data to the friends API.
     $.post("/api/friends", userData, (data) => {

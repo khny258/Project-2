@@ -19,8 +19,26 @@ app.set("view engine", ".hbs");
 // Routes
 const apiRoutes = require("./routes/apiRoutes");
 const htmlRoutes = require("./routes/htmlRoutes");
+ 
 
 app.use(apiRoutes, htmlRoutes);
+require("./survey/matchinglogic")(app);
+var db = require('./config/index');
+
+async function getUser() {
+    const users = await db.findUsers();
+    var string = JSON.stringify(users);
+    var userData = JSON.parse(string);
+    console.log(userData);
+    app.get("/api/friends", function(req,res){
+      res.send(userData);
+    })
+}
+
+
+
+getUser();
+
 
 // Starting the server, syncing our models ------------------------------------/
 app.listen(PORT, () => {
@@ -31,4 +49,8 @@ app.listen(PORT, () => {
   );
 });
 
-module.exports = app;
+//
+
+//
+
+//module.exports = app;

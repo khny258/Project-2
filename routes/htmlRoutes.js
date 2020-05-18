@@ -40,8 +40,8 @@ router.get("/games", (req, res) => {
   })
 })
 
-router.get("*", function(req, res) {
-  res.render("404");
-});
+//router.get("*", function(req, res) {
+//  res.render("404");
+//});
 
 module.exports = router;
