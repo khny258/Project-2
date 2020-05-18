@@ -10,7 +10,7 @@
 
 html, body {
 	height: 100%;
-	background: rgb(0);
+	background: #0;
 }
 
 .align {
@@ -63,7 +63,7 @@ html, body {
 
 .head .selected {
 	position: relative;
-	color: rgb(182, 121, 233);
+	color: #ff0065;
 	font-weight: 700;
 }
 
@@ -74,7 +74,7 @@ html, body {
 	left: 0;
 	height: 5px;
 	width: 100%;
-	background: rgb(182, 121, 233);
+	background: #ff0065;
 	border-radius: 99px 99px 0 0;
 }
 
@@ -91,7 +91,6 @@ form {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	align-items: center;
 	position: relative;
 	right: 0;
 	transition: right 0.2s;
@@ -172,19 +171,15 @@ form {
 
 .card button {
 	display: block;
-	background: rgb(182, 121, 233);
+	background: #ff0065;
 	padding: 14px 52px;
 	border-radius: 12px;
-	color: rgb(0, 0, 0);
+	color: #003B15;
 	font-weight: 700;
 	font-size: 21px;
 	cursor: pointer;
 }
 
-.signin-button {
-	width: 210px;
-	height: 40px;
-}
 
 
 

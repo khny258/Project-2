@@ -1,6 +1,5 @@
 DROP DATABASE IF EXISTS timbr_db;
 CREATE DATABASE timbr_db;
-USE timbr_db;
 
 CREATE TABLE timbr_user (
 id INT NOT NULL AUTO_INCREMENT,
