@@ -6,7 +6,15 @@ const keys = require('./keys');
 //    host: keys.dbConfig.host,
 //    dialect: "mysql"
 // });
+var connectionSQL = mysql.createConnection({
+   host: "localhost",
+   port: 3306,
+   user: "root",
+   password: "rootroot",
+   database: "timbr_db"
+ });
 
+ 
 let connection;
 if (process.env.JAWSDB_URL) {
    connection = new Sequelize(process.env.JAWSDB_URL)
@@ -19,3 +27,4 @@ else {
 }
 
 module.exports = connection;
+module.exports = connectionSQL;
